@@ -19,4 +19,27 @@ export interface HeaderButtonsProps {
 }
 
 
+export interface GeneralInfoData {
+  title: string;
+  description: string;
+}
 
+export interface NewsItem {
+  id: string;
+  title: string;
+  date: Date;
+  content: string;
+}
+
+export interface ThemeContextType {
+  isDarkMode: boolean;
+}
+
+
+export interface CalendarEvent {
+  id: string;
+  title: string;
+  start: Date;
+  end: Date;
+  description?: string | undefined;
+}

@@ -43,6 +43,25 @@ export const voorstellingen : VoorstellingenPageProps[] = [
     },
     Voorwaarden: `Inschrijving van 25 euro per deelnemer. \n Tickets apart aan te kopen via de website van Spotlight`
     }
-,  
+, 
+{
+    Title: "Spotlight",
+    ImageURL: "https://de-ingang.be/app/uploads/2023/03/LDEMO_leerlingenshowdanshuis_de_ingang.jpg",
+    Description: "Jaarlijkse dansvoorstelling van de dansschool De Ingang in Gent",
+    StartDate: new Date("2026-05-22"),
+    EndDate: new Date("2026-05-22"),
+    TicketURL: "https://spotlightevents.be/collections/all",
+    Locatie: {
+        Adres: " Sint-Pietersnieuwstraat 23",
+        Stad: "Gent",
+        Land: "België"
+    },
+    Voorwaarden: undefined
+    }
+
+
+
+
+
 ];
 
