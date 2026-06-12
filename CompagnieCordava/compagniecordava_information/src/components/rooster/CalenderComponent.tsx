@@ -42,7 +42,7 @@ const CalendarComponent: React.FC = () => {
     : {
         backgroundColor: "#ffffff",
         border: "none",
-        borderRadius: "0px",
+        borderRadius: "1rem", // Iets modernere afgeronde hoek voor de lichte container
         color: "#191c1d",
         boxShadow: "0 4px 20px rgba(0, 0, 0, 0.05)",
         marginTop: "24px",
@@ -52,14 +52,14 @@ const CalendarComponent: React.FC = () => {
     backgroundColor: isDarkMode ? "rgba(255, 255, 255, 0.05)" : "#f8f9fa",
     color: isDarkMode ? "#e5e2e1" : "#191c1d",
     border: `1px solid ${isDarkMode ? "rgba(255, 255, 255, 0.1)" : "#e1e3e4"}`,
-    padding: "8px 12px",
+    padding: "8px 16px", // Iets meer padding voor een moderne look
     fontFamily: isDarkMode ? "Inter, sans-serif" : "Montserrat, sans-serif",
     fontSize: "14px",
     fontWeight: 600,
     textTransform: "uppercase",
     outline: "none",
     cursor: "pointer",
-    borderRadius: "0px",
+    borderRadius: "9999px", // <-- Ronde hoeken voor de input
     width: isMobile ? "100%" : "auto",
   };
 
@@ -96,20 +96,45 @@ const CalendarComponent: React.FC = () => {
             font-family: ${isDarkMode ? "Inter, sans-serif" : "Montserrat, sans-serif"};
           }
 
+          /* --- Styling voor de FullCalendar Knoppen --- */
           .fc .fc-button {
-            border-radius: 0px;
+            border-radius: 9999px; /* <-- Maakt de knoppen volledig rond (pill shape) */
+            padding: 8px 16px;     /* <-- Zorgt voor voldoende 'ademruimte' */
             text-transform: uppercase;
             font-weight: 600;
+            letter-spacing: 0.05em; /* Optioneel: iets meer spatie tussen letters voor een strakkere look */
+            transition: all 0.2s ease; /* Zachte overgang bij hover */
           }
           
-          .fc-timegrid-event {
-            border-radius: 0px;
+          /* FullCalendar plakt knoppen standaard aan elkaar vast (button groups). 
+             Om de ronde hoeken overal te behouden en ze niet te laten overvloeien, 
+             moeten we de standaard marges/borders tussen gegroepeerde knoppen resetten. */
+          .fc .fc-button-group > .fc-button:not(:last-child) {
+            border-bottom-right-radius: 9999px;
+            border-top-right-radius: 9999px;
+            margin-right: 8px; /* Ruimte TUSSEN de knoppen */
+          }
+          .fc .fc-button-group > .fc-button:not(:first-child) {
+            border-bottom-left-radius: 9999px;
+            border-top-left-radius: 9999px;
+            margin-left: 0px; 
+          }
+          
+          /* Knoppen iets verkleinen als ze worden ingedrukt */
+          .fc .fc-button:active {
+            transform: scale(0.95);
+          }
+
+          /* --- Styling voor Events IN de kalender --- */
+          .fc-timegrid-event, .fc-daygrid-event {
+            border-radius: 6px; /* <-- Maakt de events zelf ook iets zachter/ronder */
             padding: 2px 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* Subtiel schaduwtje op de events */
           }
 
           .custom-date-picker:focus {
             outline: 2px solid ${isDarkMode ? "#dbfcff" : "#00F0FF"} !important;
-            outline-offset: -1px;
+            outline-offset: 2px; /* Aangepast voor ronde input */
           }
           
           ::-webkit-calendar-picker-indicator {
@@ -128,6 +153,11 @@ const CalendarComponent: React.FC = () => {
             .date-picker-container {
               flex-direction: column;
               align-items: stretch !important;
+            }
+            /* Op mobiel de knoppen iets kleiner maken zodat ze beter passen */
+            .fc .fc-button {
+              padding: 6px 12px;
+              font-size: 0.85em;
             }
           }
         `}
@@ -163,7 +193,6 @@ const CalendarComponent: React.FC = () => {
         />
       </div>
 
-      {/* Forceer re-render via key prop wanneer we switchen tussen mobile en desktop view voor de initialView */}
       <FullCalendar
         key={isMobile ? "mobile" : "desktop"}
         ref={calendarRef}
@@ -189,7 +218,9 @@ const CalendarComponent: React.FC = () => {
         headerToolbar={{
           left: "prev,next today",
           center: "title",
-          right: isMobile ? "timeGridDay" : "timeGridWeek,timeGridDay",
+          right: isMobile
+            ? "dayGridMonth,timeGridDay"
+            : "dayGridMonth,timeGridWeek,timeGridDay",
         }}
         height="auto"
       />

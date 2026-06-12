@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FiSun, FiMoon, FiMenu, FiX } from "react-icons/fi";
 import useDarkModeToggle from "../../hooks/useDarkModeToggle";
 import HeaderButtons from "../Buttons/HeaderButtons";
+import { NavLink } from "react-router";
 
 const Header = () => {
   const { isDarkMode, toggleTheme } = useDarkModeToggle();
@@ -29,12 +30,13 @@ const Header = () => {
         }`}
       >
         <div className="shrink-0 cursor-pointer">
-          <h1
+          <NavLink
+          to={"/"}
             className={`text-xl font-bold tracking-tight transition-colors duration-300
             ${isDarkMode ? "text-[#cbf4f9]" : "text-[#006064]"}`}
           >
             Compagnie Cordava
-          </h1>
+          </NavLink>
         </div>
 
         <nav className="hidden md:flex items-center gap-8 text-sm font-semibold">

@@ -1,21 +1,23 @@
 import type { GeneralInfoData, NewsItem } from "../types";
 
 export const overViewData: GeneralInfoData = {
-    title: "Welkom bij Compagnie Cordava",
+    title: "Welkom! ",
     description: "Deze pagina is gemaakt om een overzicht te geven van de belangrijkste informatie over Compagnie Cordava, inclusief welke voorstellingen er gepland staan, nieuws en algemene informatie over de repetities.",
 }
 
 export const newsList: NewsItem[] = [
     {
         id: "1",
-        title: "First News Item",
-        date: new Date("2026-06-05"),
-        content: "Eerste update over de repetities en de planning van de voorstellingen.",
+        title: "Eerste auditie 21/06",
+        date: new Date("2026-06-12"),
+        content: "De eerste auditie voor onze compagnie vindt plaats op 21/06 van 10-13u in Danshuis De Ingang.",
+        EventLink: "/Rooster"
     },
     {
         id: "2",
-        title: "Second News Item",
-        date: new Date("2026-06-06"),
-        content: "Tweede update over de repetities en de planning van de voorstellingen.",
+        title: "Tweede auditie 30/08",
+        date: new Date("2026-06-12"),
+        content: "De eerste auditie voor onze compagnie vindt plaats op 30/08 van 10-13u in Danshuis De Ingang.",
+        EventLink: "/Rooster"
     }
 ]

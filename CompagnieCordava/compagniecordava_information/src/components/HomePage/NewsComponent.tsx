@@ -1,6 +1,7 @@
 // components/HomePage/NewsComponent.tsx
 import React from "react";
 import type { NewsItem } from "../../types";
+import { Link } from "react-router";
 
 
 interface NewsComponentProps {
@@ -107,6 +108,24 @@ const NewsComponent: React.FC<NewsComponentProps> = ({ news, isDarkMode }) => {
             <p style={{ fontSize: "16px", lineHeight: "24px", margin: 0 }}>
               {item.content}
             </p>
+
+
+            {item.EventLink && (
+              <div style={{ marginTop: "24px" }}>
+                <Link
+                  to={item.EventLink}
+                  className={`inline-block px-6 py-2.5 text-sm font-bold rounded-full uppercase tracking-wider transition-all duration-300 hover:scale-105 active:scale-95
+                    ${
+                      isDarkMode
+                        ? "bg-[#dbfcff] text-[#00363a] rounded-full hover:shadow-[0_0_15px_rgba(219,252,255,0.4)]"
+                        : "bg-[#00F0FF] text-[#191c1d] rounded-full hover:bg-[#00dbe9]"
+                    }
+                  `}
+                >
+                  Check event
+                </Link>
+              </div>
+            )}
           </article>
         ))}
       </div>

@@ -29,6 +29,7 @@ export interface NewsItem {
   title: string;
   date: Date;
   content: string;
+  EventLink?: string;
 }
 
 export interface ThemeContextType {
@@ -41,5 +42,6 @@ export interface CalendarEvent {
   title: string;
   start: Date;
   end: Date;
-  description?: string | undefined;
+  description?: string ;
+  EventLink?: string
 }

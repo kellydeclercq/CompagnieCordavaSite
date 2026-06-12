@@ -3,6 +3,7 @@ import React from "react";
 import type { GeneralInfoData } from "../../types";
 
 
+
 interface GeneralInfoProps {
   data: GeneralInfoData;
   isDarkMode: boolean;
@@ -26,7 +27,7 @@ const GeneralInfo: React.FC<GeneralInfoProps> = ({ data, isDarkMode }) => {
         border: "none",
         text: "#191c1d",
         title: "#00F0FF",
-        radius: "0px",
+        radius: "1.5rem",
         backdropFilter: "none",
         fontFamilyTitle: "Montserrat, sans-serif",
         fontFamilyBody: "Montserrat, sans-serif",
@@ -63,6 +64,7 @@ const GeneralInfo: React.FC<GeneralInfoProps> = ({ data, isDarkMode }) => {
       <p style={{ fontSize: "18px", lineHeight: "28px", margin: "0 0 12px 0" }}>
         {data.description}
       </p>
+     
     </section>
   );
 };

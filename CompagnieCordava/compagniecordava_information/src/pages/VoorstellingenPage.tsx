@@ -3,7 +3,7 @@ import { getVoorstellingen } from "../hooks/useVoorstellingen";
 import type { VoorstellingenPageProps } from "../types";
 
 const VoorstellingenPage = () => {
-  const { voorstellingen: data } = getVoorstellingen();
+  const {data} = getVoorstellingen();
 
   return (
     <>

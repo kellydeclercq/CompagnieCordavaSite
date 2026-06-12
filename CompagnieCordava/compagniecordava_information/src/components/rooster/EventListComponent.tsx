@@ -1,5 +1,5 @@
-// components/rooster/EventListComponent.tsx
 import React from "react";
+import { Link } from "react-router";
 import useDarkModeToggle from "../../hooks/useDarkModeToggle";
 import { GetEvents } from "../../hooks/useCalenderEvents";
 
@@ -8,7 +8,8 @@ interface CalendarEvent {
   title: string;
   start: Date;
   end: Date;
-  description?: string; // Nieuw veld toegevoegd
+  description?: string;
+  EventLink?: string;
 }
 
 const EventListComponent: React.FC = () => {
@@ -64,6 +65,8 @@ const EventListComponent: React.FC = () => {
         backdropFilter: "blur(20px)",
         marginBottom: "16px",
         color: "#e5e2e1",
+        display: "flex",
+        flexDirection: "column",
       }
     : {
         backgroundColor: "#ffffff",
@@ -72,6 +75,8 @@ const EventListComponent: React.FC = () => {
         boxShadow: "0 4px 20px rgba(0, 0, 0, 0.05)",
         marginBottom: "16px",
         color: "#191c1d",
+        display: "flex",
+        flexDirection: "column",
       };
 
   const timeStyle: React.CSSProperties = {
@@ -88,12 +93,25 @@ const EventListComponent: React.FC = () => {
     color: isDarkMode ? "#e5e2e1" : "#191c1d",
   };
 
-  // Styling voor de nieuwe description
   const descriptionStyle: React.CSSProperties = {
     margin: "8px 0 0 0",
-    color: isDarkMode ? "#b9cacb" : "#3b494b", // on-surface-variant voor subtiliteit
+    color: isDarkMode ? "#b9cacb" : "#3b494b",
     lineHeight: "1.5",
     fontWeight: 400,
+  };
+
+  // Vaste waarden voor de knopkleuren en hoeken, de grootte wordt in CSS bepaald
+  const buttonStyle: React.CSSProperties = {
+    alignSelf: "flex-start",
+    marginTop: "16px",
+    backgroundColor: isDarkMode ? "#dbfcff" : "#00F0FF",
+    color: isDarkMode ? "#00363a" : "#191c1d",
+    textDecoration: "none",
+    fontWeight: 700,
+    textTransform: "uppercase",
+    letterSpacing: "0.05em",
+    borderRadius: "9999px",
+    transition: "transform 0.2s ease",
   };
 
   const formatEventTime = (start: Date, end: Date) => {
@@ -128,30 +146,29 @@ const EventListComponent: React.FC = () => {
     <div style={containerStyle} className="event-list-container">
       <style>
         {`
-          .event-list-container .month-header {
-            font-size: 20px;
+          .event-list-container .month-header { font-size: 20px; }
+          .event-list-container .event-card { padding: 16px; }
+          .event-list-container .event-title { font-size: 16px; }
+          .event-list-container .event-description { font-size: 14px; }
+          
+          /* Basis (Mobiel) styling voor de knop: Kleiner lettertype & padding */
+          .event-btn { 
+            padding: 6px 16px; 
+            font-size: 10px; 
           }
-          .event-list-container .event-card {
-            padding: 16px;
-          }
-          .event-list-container .event-title {
-            font-size: 16px;
-          }
-          .event-list-container .event-description {
-            font-size: 6px;
-          }
+          .event-btn:hover { transform: scale(1.05); }
+          .event-btn:active { transform: scale(0.95); }
+          
+          /* Desktop styling voor de knop: Groter lettertype & padding */
           @media (min-width: 768px) {
-            .event-list-container .month-header {
-              font-size: 24px;
-            }
-            .event-list-container .event-card {
-              padding: 24px;
-            }
-            .event-list-container .event-title {
-              font-size: 18px;
-            }
-            .event-list-container .event-description {
-              font-size: 12px;
+            .event-list-container .month-header { font-size: 24px; }
+            .event-list-container .event-card { padding: 24px; }
+            .event-list-container .event-title { font-size: 18px; }
+            .event-list-container .event-description { font-size: 16px; }
+            
+            .event-btn { 
+              padding: 8px 24px; 
+              font-size: 12px; 
             }
           }
         `}
@@ -177,6 +194,16 @@ const EventListComponent: React.FC = () => {
                   <p style={descriptionStyle} className="event-description">
                     {event.description}
                   </p>
+                )}
+
+                {event.EventLink && (
+                  <Link
+                    to={event.EventLink}
+                    style={buttonStyle}
+                    className="event-btn"
+                  >
+                    Meer Info
+                  </Link>
                 )}
               </div>
             ))}
