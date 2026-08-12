@@ -2,25 +2,11 @@ import type { VoorstellingenPageProps } from "../types"
 
 export const voorstellingen : VoorstellingenPageProps[] = [
     {
-    Title: "Elements VZW",
-    ImageURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs-_0l8iDxg6QvZBW2xZ3uqwxtxnawqqN-TA&s",
-    Description: "Dansvoorstelling Elements VZW",
-    StartDate: new Date("2027-04-01"),
-    EndDate: new Date("2027-04-02"),
-    TicketURL: "https://www.vzwelements.be/ticketverkoop",
-    Locatie: {
-        Adres: " Driekoningenplein 15",
-        Stad: "Merelbeke-Melle",
-        Land: "België"
-        },
-     Voorwaarden: "Nog niet bevestigd."
-    },
-    {
     Title: "Elements Genesis",
-    ImageURL: "https://static.wixstatic.com/media/a448d6_a021cf093e914cedaba6818c0a420036~mv2.png/v1/fill/w_2056,h_2570,al_c,q_95,usm_0.66_1.00_0.01,enc_avif,quality_auto/affiche.png",
-    Description: "Dansvoorstelling Elements Genesis",
-    StartDate: new Date("2027-04-18"),
-    EndDate: new Date("2027-04-18"),
+    ImageURL: "https://static.wixstatic.com/media/a448d6_4abd0b630b4844f183c9f33299dc9e83~mv2.jpg",
+    Description: "Dansvoorstelling Elements Genesis in Oosterzele",
+    StartDate: new Date("2027-03-26"),
+    EndDate: new Date("2027-03-26"),
     TicketURL: "https://www.vzwelements.be/ticketverkoop",
     Locatie: {
         Adres: "Sportstraat 3",
@@ -30,11 +16,25 @@ export const voorstellingen : VoorstellingenPageProps[] = [
      Voorwaarden: "Nog niet bevestigd." 
     },
     {
+    Title: "Elements Genesis",
+    ImageURL: "https://static.wixstatic.com/media/a448d6_4abd0b630b4844f183c9f33299dc9e83~mv2.jpg",
+    Description: "Dansvoorstelling Elements Genesis in Dendermonde",
+    StartDate: new Date("2027-01-31"),
+    EndDate: new Date("2027-01-31"),
+    TicketURL: "https://www.vzwelements.be/ticketverkoop",
+    Locatie: {
+        Adres: "Kerkstraat 24",
+        Stad: "Dendermonde",
+        Land: "België"
+    },
+     Voorwaarden: "Nog niet bevestigd." 
+    },
+    {
     Title: "Spotlight",
     ImageURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZo_vqdQqJEjqoUhUrO6vB9aJYMiX7LagtHA&s",
     Description: "Een semi-professionele dansvoorstelling in Brugge",
-    StartDate: new Date("2026-11-8"),
-    EndDate: new Date("2026-11-9"),
+    StartDate: new Date("2027-02-12"),
+    EndDate: new Date("2027-02-13"),
     TicketURL: "https://spotlightevents.be/collections/all",
     Locatie: {
         Adres: "Vlamingstraat 29",
@@ -46,11 +46,11 @@ export const voorstellingen : VoorstellingenPageProps[] = [
 , 
 {
     Title: "L-demo",
-    ImageURL: "https://de-ingang.be/app/uploads/2023/03/LDEMO_leerlingenshowdanshuis_de_ingang.jpg",
+    ImageURL: "https://de-ingang.be/app/themes/de-ingang/public/images/de-ingang.svg?id=eefa9eccc5ff2881ee26c5d0e5a1192d",
     Description: "Jaarlijkse dansvoorstelling van de dansschool De Ingang in Gent",
     StartDate: new Date("2027-05-22"),
     EndDate: new Date("2027-05-22"),
-    TicketURL: "https://spotlightevents.be/collections/all",
+    TicketURL: "",
     Locatie: {
         Adres: " Sint-Pietersnieuwstraat 23",
         Stad: "Gent",
@@ -61,7 +61,7 @@ export const voorstellingen : VoorstellingenPageProps[] = [
 {
     Title: "DIHP ",
     ImageURL: "https://images.squarespace-cdn.com/content/v1/5c756659e666695b6a5dd12a/aa636d9f-23c2-434a-9e6e-fea38616870f/DIHP_affiche_2026.png?format=1000w",
-    Description: 'Speciale voorstelling "Everybody supports women" met extra uitgenodigde dansers. ',
+    Description: 'Speciale voorstelling "Everybody supports women"',
     StartDate: new Date("2026-08-22"),
     EndDate: new Date("2026-08-22"),
     TicketURL: "https://www.dihp.be/",
@@ -70,16 +70,16 @@ export const voorstellingen : VoorstellingenPageProps[] = [
         Stad: "Gent",
         Land: "België"
         },
-     Voorwaarden: "Gratis inkom"
+     Voorwaarden: "Gratis inkom. Optreden start rond 20u. Gratis workshop modern ervoor om 19u15."
     },
 
 {
-    Title: "Dance Attack Oosterzele ",
-    ImageURL: "https://images.squarespace-cdn.com/content/v1/5c756659e666695b6a5dd12a/aa636d9f-23c2-434a-9e6e-fea38616870f/DIHP_affiche_2026.png?format=1000w",
+    Title: "Dance Attack Jabbeke ",
+    ImageURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8RT3tn5Cho76OtJYdYZM2KXZ8YmIv_voarMZq5jayzs9Kc-VcSD9Cmg8&s=10",
     Description: "Voorstelling op dance attack",
-    StartDate: new Date("2027-01-17"),
-    EndDate: new Date("2027-01-17"),
-    TicketURL: "https://www.danceattack.org",
+    StartDate: new Date("2027-02-28"),
+    EndDate: new Date("2027-02-28"),
+    TicketURL: "https://www.danceattacbeersek.org",
     Locatie: {
         Adres: "Sportstraat 3",
         Stad: "Oosterzele",
