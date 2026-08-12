@@ -178,12 +178,48 @@ export const events: CalendarEvent[] = [
       EventLink: "https://de-ingang.be/cursussen/moderne-dans-choreo-groep-kelly/"
     },
     {
-      id: "30",
-      title: "Optreden DIHP",
-      start: new Date("2026-08-22T19:00:00"),
-      end: new Date("2026-08-22T19:30:00"),
-      EventLink: "/Voorstellingen"
+      id: "31",
+      title: "Elements Genesis",
+      start: new Date("2027-03-26"),
+      end: new Date("2027-03-26"),
+      EventLink: "https://www.vzwelements.be/ticketverkoop"
     },
+    {
+      id: "32",
+      title: "Elements Genesis",
+      start: new Date("2027-01-31"),
+      end: new Date("2027-01-31"),
+      EventLink: "https://www.vzwelements.be/ticketverkoop"
+    },
+    {
+      id: "33",
+      title: "Spotlight",
+      start: new Date("2027-02-12"),
+      end: new Date("2027-02-13"),
+      EventLink: "https://spotlightevents.be/collections/all"
+    },
+    {
+      id: "34",
+      title: "L-demo",
+      start: new Date("2027-05-22"),
+      end: new Date("2027-05-22"),
+      // Lege EventLink kan worden weggelaten of leeg blijven, afhankelijk van hoe je component ermee omgaat
+      EventLink: "" 
+    },
+    {
+      id: "35",
+      title: "DIHP",
+      start: new Date("2026-08-22"),
+      end: new Date("2026-08-22"),
+      EventLink: "https://www.dihp.be/"
+    },
+    {
+      id: "36",
+      title: "Dance Attack Jabbeke",
+      start: new Date("2027-02-28"),
+      end: new Date("2027-02-28"),
+      EventLink: "https://www.danceattacbeersek.org"
+    }
 
 
 
