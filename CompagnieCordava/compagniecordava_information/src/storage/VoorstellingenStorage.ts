@@ -45,6 +45,21 @@ export const voorstellingen : VoorstellingenPageProps[] = [
     }
 , 
 {
+    Title: "Elements",
+    ImageURL: "",
+    Description: "Dansvoorstelling Elements in Merelbeke",
+    StartDate: new Date("2027-03-26"),
+    EndDate: new Date("2027-03-26"),
+    TicketURL: "",
+    Locatie: {
+        Adres: "Driekoningenplein 15",
+        Stad: "Merelbeke",
+        Land: "België"
+    },
+     Voorwaarden: "Nog niet bevestigd."
+    }
+,
+{
     Title: "L-demo",
     ImageURL: "https://de-ingang.be/app/themes/de-ingang/public/images/de-ingang.svg?id=eefa9eccc5ff2881ee26c5d0e5a1192d",
     Description: "Jaarlijkse dansvoorstelling van de dansschool De Ingang in Gent",
