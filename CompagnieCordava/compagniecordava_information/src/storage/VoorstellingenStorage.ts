@@ -5,8 +5,8 @@ export const voorstellingen : VoorstellingenPageProps[] = [
     Title: "Elements Genesis",
     ImageURL: "https://static.wixstatic.com/media/a448d6_4abd0b630b4844f183c9f33299dc9e83~mv2.jpg",
     Description: "Dansvoorstelling Elements Genesis in Oosterzele",
-    StartDate: new Date("2027-03-26"),
-    EndDate: new Date("2027-03-26"),
+    StartDate: new Date("2027-04-04"),
+    EndDate: new Date("2027-04-04"),
     TicketURL: "https://www.vzwelements.be/ticketverkoop",
     Locatie: {
         Adres: "Sportstraat 3",
@@ -34,7 +34,7 @@ export const voorstellingen : VoorstellingenPageProps[] = [
     ImageURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZo_vqdQqJEjqoUhUrO6vB9aJYMiX7LagtHA&s",
     Description: "Een semi-professionele dansvoorstelling in Brugge",
     StartDate: new Date("2027-02-12"),
-    EndDate: new Date("2027-02-13"),
+    EndDate: new Date("2027-02-12"),
     TicketURL: "https://spotlightevents.be/collections/all",
     Locatie: {
         Adres: "Vlamingstraat 29",
@@ -72,20 +72,6 @@ export const voorstellingen : VoorstellingenPageProps[] = [
         Land: "België"
     },
     Voorwaarden: "Meer info volgt nog."
-    },
-{
-    Title: "DIHP ",
-    ImageURL: "https://images.squarespace-cdn.com/content/v1/5c756659e666695b6a5dd12a/aa636d9f-23c2-434a-9e6e-fea38616870f/DIHP_affiche_2026.png?format=1000w",
-    Description: 'Speciale voorstelling "Everybody supports women"',
-    StartDate: new Date("2026-08-22"),
-    EndDate: new Date("2026-08-22"),
-    TicketURL: "https://www.dihp.be/",
-    Locatie: {
-        Adres: "Azaleapark",
-        Stad: "Gent",
-        Land: "België"
-        },
-     Voorwaarden: "Gratis inkom. Optreden start rond 20u. Gratis workshop modern ervoor om 19u15."
     },
 
 {
