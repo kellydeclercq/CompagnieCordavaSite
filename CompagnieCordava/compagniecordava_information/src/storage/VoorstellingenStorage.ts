@@ -101,7 +101,7 @@ export const voorstellingen : VoorstellingenPageProps[] = [
         Stad: "Gent",
         Land: "België"
         },
-      Voorwaarden: "Bevestigd. Tickets zijn te koop via de website van Dance Attack vanaf 26/10/2026"
+      Voorwaarden: "Bevestigd. Gratis toegang"
     },
 
 ];
