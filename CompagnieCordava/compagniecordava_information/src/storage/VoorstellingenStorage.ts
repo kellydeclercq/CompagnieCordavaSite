@@ -45,7 +45,7 @@ export const voorstellingen : VoorstellingenPageProps[] = [
     }
 , 
 {
-    Title: "Elements",
+    Title: "Elements Next Generation & Adults",
     ImageURL: "",
     Description: "Dansvoorstelling Elements in Merelbeke",
     StartDate: new Date("2027-03-26"),
@@ -86,12 +86,23 @@ export const voorstellingen : VoorstellingenPageProps[] = [
         Stad: "Oosterzele",
         Land: "België"
         },
-      Voorwaarden: "Nog niet bevestigd."
+      Voorwaarden: "Bevestigd. Tickets zijn te koop via de website van Dance Attack vanaf 26/10/2026"
     },
 
-
-
-
+    {
+    Title: "Dansproject verweven paden",
+    ImageURL: "https://codedans.be/wp-content/uploads/2021/05/CODEDANS_SITE_EVENT_960680_2-scaled.jpg",
+    Description: "VERWEVEN PADEN: een dansparcours doorheen het Galveston gebouw, geïnspireerd op het boek Zoektocht naar het verleden over adoptie, afkomst en identiteit.",
+    StartDate: new Date("2027-02-07"),
+    EndDate: new Date("2027-02-07"),
+    TicketURL: "Gratis toegang",
+    Locatie: {
+        Adres: "Hurstweg 8",
+        Stad: "Gent",
+        Land: "België"
+        },
+      Voorwaarden: "Bevestigd. Tickets zijn te koop via de website van Dance Attack vanaf 26/10/2026"
+    },
 
 ];
 
