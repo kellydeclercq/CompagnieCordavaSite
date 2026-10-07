@@ -46,7 +46,7 @@ export const voorstellingen : VoorstellingenPageProps[] = [
 , 
 {
     Title: "Elements Next Generation & Adults",
-    ImageURL: "",
+    ImageURL: "https://static.wixstatic.com/media/a448d6_4abd0b630b4844f183c9f33299dc9e83~mv2.jpg",
     Description: "Dansvoorstelling Elements in Merelbeke",
     StartDate: new Date("2027-03-26"),
     EndDate: new Date("2027-03-26"),
