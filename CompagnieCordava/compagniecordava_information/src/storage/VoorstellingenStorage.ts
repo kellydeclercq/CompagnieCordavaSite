@@ -13,7 +13,7 @@ export const voorstellingen : VoorstellingenPageProps[] = [
         Stad: "Oosterzele",
         Land: "België"
     },
-     Voorwaarden: "Nog niet bevestigd." 
+     Voorwaarden: "Bevestigd, verplicht aankopen/verkopen van 2 tickets per danser." 
     },
     {
     Title: "Elements Genesis",
@@ -27,7 +27,7 @@ export const voorstellingen : VoorstellingenPageProps[] = [
         Stad: "Dendermonde",
         Land: "België"
     },
-     Voorwaarden: "Nog niet bevestigd." 
+     Voorwaarden: "Bevestigd, verplicht aankopen/verkopen van 2 tickets per danser." 
     },
     {
     Title: "Spotlight",
@@ -56,7 +56,7 @@ export const voorstellingen : VoorstellingenPageProps[] = [
         Stad: "Merelbeke",
         Land: "België"
     },
-     Voorwaarden: "Nog niet bevestigd."
+     Voorwaarden: "Bevestigd, verplicht aankopen/verkopen van 2 tickets per danser."
     }
 ,
 {
@@ -101,7 +101,7 @@ export const voorstellingen : VoorstellingenPageProps[] = [
         Stad: "Gent",
         Land: "België"
         },
-      Voorwaarden: "Bevestigd. Gratis toegang"
+      Voorwaarden: "Nog niet bevestigd. Gratis toegang"
     },
 
 ];
